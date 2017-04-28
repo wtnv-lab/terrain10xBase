@@ -48,15 +48,29 @@
     viewPointsArray[0] = new viewPoints("東京", 35.3606, 138.7278, 0, -45, 160000);
 
     var viewer = new Cesium.Viewer('cesiumContainer', {
+      // ベースマップをESRIの衛星画像に
       imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
         url: '//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer',
         enablePickFeatures: false
       }),
+      // ベースマップをOpenStreetMapに
+      /*
+      //imageryProvider: new Cesium.createOpenStreetMapImageryProvider({}),
+      */
+
+      // ベースマップを夜間光（Black Marble）に
+      /*
+      imageryProvider: Cesium.createTileMapServiceImageryProvider({
+        url: 'https://cesiumjs.org/blackmarble',
+        credit: 'Black Marble imagery courtesy NASA Earth Observatory',
+        flipXY: true
+      }),
+      */
       timeline: false,
       animation: false,
       baseLayerPicker: false,
       homeButton: false,
-      //地形強調のパラメータ
+      //地形強調のパラメータ設定
       terrainExaggeration: 10.0
     });
     var cesiumTerrainProviderMeshes = new Cesium.CesiumTerrainProvider({
