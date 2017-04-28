@@ -48,11 +48,13 @@
     viewPointsArray[0] = new viewPoints("東京", 35.3606, 138.7278, 0, -45, 160000);
 
     var viewer = new Cesium.Viewer('cesiumContainer', {
+
       // ベースマップをESRIの衛星画像に
       imageryProvider: new Cesium.ArcGisMapServerImageryProvider({
         url: '//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer',
         enablePickFeatures: false
       }),
+
       // ベースマップをOpenStreetMapに
       /*
       //imageryProvider: new Cesium.createOpenStreetMapImageryProvider({}),
@@ -66,6 +68,15 @@
         flipXY: true
       }),
       */
+
+      // ベースマップを地理院タイル（1945-50年航空写真）に
+      /*
+      imageryProvider: new Cesium.createOpenStreetMapImageryProvider({
+        url: 'http://cyberjapandata.gsi.go.jp/xyz/ort_USA10/',
+        credit: '地理院地図'
+      }),
+      */
+
       timeline: false,
       animation: false,
       baseLayerPicker: false,
