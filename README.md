@@ -22,7 +22,7 @@ Cesiumを使った地形強調のサンプルです。
 
 ### 参考リンク
 
-1. [GitHub Pagesでの閲覧](https://hwtnv.github.io/terrain10x/ "Cesiumを使った地形強調のサンプル")
+1. [GitHub Pagesでの閲覧](https://wtnv-lab.github.io/terrain10xBase/ "Cesiumを使った地形強調のサンプル")
 2. [Cesium](http://cesiumjs.org/ "Cesium")
 3. [Cesiumを使ったKML可視化のサンプル](https://github.com/wtnv-lab/cesiumGitHubPages "Cesiumを使ったKML可視化のサンプル")
  
